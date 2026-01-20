@@ -6,7 +6,7 @@
 #    By: flhensel <flhensel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/20 14:34:15 by flhensel          #+#    #+#              #
-#    Updated: 2026/01/20 15:13:29 by flhensel         ###   ########.fr        #
+#    Updated: 2026/01/20 17:42:02 by flhensel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ LIBFT_DIR = libft
 GNL_DIR = get_next_line
 MLX_DIR = minilibx-linux
 
-SRC = $(SRC_DIR)/so_long.c
+SRC = $(SRC_DIR)/so_long.c $(SRC_DIR)/map_validate.c
 OBJ = $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
 GNL_SRC = $(GNL_DIR)/get_next_line.c $(GNL_DIR)/get_next_line_utils.c

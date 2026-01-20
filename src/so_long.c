@@ -6,7 +6,7 @@
 /*   By: flhensel <flhensel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 15:09:08 by flhensel          #+#    #+#             */
-/*   Updated: 2026/01/20 15:19:14 by flhensel         ###   ########.fr       */
+/*   Updated: 2026/01/20 17:57:47 by flhensel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,14 @@ void error_exit(char *message)
 	ft_putstr_fd(message, STDERR_FILENO);
 	ft_putstr_fd("\n", STDERR_FILENO);
 	exit(1);
+}
+
+static void check_ber_extension(char *filename)
+{
+    size_t len = ft_strlen(filename);
+
+    if (len < 4 || ft_strncmp(filename + len - 4, ".ber", 4) != 0)
+        error_exit("Map file must have .ber extension");
 }
 
 char **load_map(char *filename, int *height, int *width)
@@ -157,8 +165,9 @@ int main(int ac, char *av[])
 
 	if (ac != 2)
 		error_exit("Usage: ./so_long <map_file.ber>");
+	check_ber_extension(av[1]);
 	game.map = load_map(av[1], &height, &width);
-	
+	validate_map(game.map, height, width);
 	game.map_height = height;
 	game.map_width = width;
 	init_game(&game);

@@ -6,7 +6,7 @@
 /*   By: flhensel <flhensel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 15:09:01 by flhensel          #+#    #+#             */
-/*   Updated: 2026/01/20 14:41:12 by flhensel         ###   ########.fr       */
+/*   Updated: 2026/01/20 17:42:55 by flhensel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,12 @@ typedef struct s_game
     void        *collectable_img;
     void        *exit_img;
 } t_game;
+
+void    error_exit(char *message);
+void    validate_map(char **map, int h, int w);
+char    **load_map(char *filename, int *height, int *width);
+void    load_textures(t_game *game);
+void    init_game(t_game *game);
+void    render_map(t_game *game);
 
 #endif
