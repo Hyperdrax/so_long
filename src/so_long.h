@@ -6,7 +6,7 @@
 /*   By: flhensel <flhensel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 15:09:01 by flhensel          #+#    #+#             */
-/*   Updated: 2026/01/12 15:10:54 by flhensel         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:41:12 by flhensel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,31 @@
 # include <unistd.h>
 # include <fcntl.h>
 # include <stdlib.h>
-# include <mlx.h>
+# include "../minilibx-linux/mlx.h"
+# include "../libft/libft.h"
+# include "../get_next_line/get_next_line.h"
+# define TILE_SIZE 64
+
+typedef struct s_game
+{
+    void        *mlx;
+    void        *win;
+    char        **map;
+    int         map_width;
+    int         map_height;
+
+    int         player_x;
+    int         player_y;
+
+    int         collectables;
+    int         moves;
+    int         exit_open;
+
+    void        *wall_img;
+    void        *floor_img;
+    void        *player_img;
+    void        *collectable_img;
+    void        *exit_img;
+} t_game;
 
 #endif
