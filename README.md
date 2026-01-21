@@ -38,4 +38,4 @@ Tutorials:
 - https://www.youtube.com/watch?v=RwgKqA9j3JE
 
 ### Ai usage
-AI assisted with understanding, repetitive tasks (texture loading, error handling), and debugging. All code was verified for correctness and understanding by me.
+AI assisted with understanding, repetitive & tedious tasks (texture loading, error handling, refactor), and debugging. All code was verified for correctness and understanding by me.
