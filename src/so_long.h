@@ -6,7 +6,7 @@
 /*   By: flhensel <flhensel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 15:09:01 by flhensel          #+#    #+#             */
-/*   Updated: 2026/01/20 17:42:55 by flhensel         ###   ########.fr       */
+/*   Updated: 2026/01/21 14:21:21 by flhensel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,8 @@ char    **load_map(char *filename, int *height, int *width);
 void    load_textures(t_game *game);
 void    init_game(t_game *game);
 void    render_map(t_game *game);
+int     close_game(t_game *game);
+int     handle_key(int keycode, t_game *game);
+void    move_player(t_game *game, int dx, int dy);
 
 #endif
