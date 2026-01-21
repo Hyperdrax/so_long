@@ -6,7 +6,7 @@
 #    By: flhensel <flhensel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/20 14:34:15 by flhensel          #+#    #+#              #
-#    Updated: 2026/01/20 17:42:02 by flhensel         ###   ########.fr        #
+#    Updated: 2026/01/21 17:54:40 by flhensel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,16 @@ LIBFT_DIR = libft
 GNL_DIR = get_next_line
 MLX_DIR = minilibx-linux
 
-SRC = $(SRC_DIR)/so_long.c $(SRC_DIR)/map_validate.c
+SRC = $(SRC_DIR)/so_long.c \
+      $(SRC_DIR)/so_long_utils.c \
+      $(SRC_DIR)/map_loader.c \
+      $(SRC_DIR)/map_validate.c \
+      $(SRC_DIR)/map_borders.c \
+      $(SRC_DIR)/map_pathfinding.c \
+      $(SRC_DIR)/game_init.c \
+      $(SRC_DIR)/game_render.c \
+      $(SRC_DIR)/player_movement.c
+
 OBJ = $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
 GNL_SRC = $(GNL_DIR)/get_next_line.c $(GNL_DIR)/get_next_line_utils.c
